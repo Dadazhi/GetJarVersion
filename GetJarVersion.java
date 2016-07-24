@@ -93,6 +93,8 @@ public static void getVersion(String jarpath) {
 	int major = data.readUnsignedShort();
 	Version = ((String) GetJarVersion.getClassVersion().get(major + "." + minor))!=null?(String) GetJarVersion.getClassVersion().get(major + "." + minor):(major + "." + minor);
 	b = null;
+	}else{
+		System.out.println("No class file found in the jar..");
 	}
 
 	}
