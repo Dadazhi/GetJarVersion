@@ -30,6 +30,7 @@ return map;
 
 public static void getVersion(String jarpath) {
 	
+	if(jarpath.endsWith(".jar")){
 	ZipInputStream zip = null;
 	String substr1 = "Created-By:";
 	String substr2 = "Build-Jdk:";
@@ -109,8 +110,13 @@ public static void getVersion(String jarpath) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 	}
+	}else{
 
+		System.out.println("Please enter valid jar file name with absolute path and try again..");
+	
 	}
+	}
+	
 
 	
 /**
